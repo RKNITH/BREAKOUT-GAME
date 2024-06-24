@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: gray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 45px;
+  color: #fff;
+}
+
+canvas {
+  background: #f0f0f0;
+  display: block;
+  border-radius: 5px;
+  box-shadow: 10px 10px 10px rgba(21, 0, 22, 0.9);
+}
+
+.btn {
+  cursor: pointer;
+  border: 0;
+  padding: 10px 20px;
+  background: rgb(255, 0, 255);
+  color: #fff;
+  border-radius: 5px;
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.btn:hover {
+  background: rgb(150, 6, 150);
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.rules-btn {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+.rules {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #333;
+  color: #fff;
+  min-height: 100vh;
+  width: 400px;
+  padding: 20px;
+  line-height: 1.5;
+  transform: translateX(-400px);
+  transition: transform 1s ease-in-out;
+}
+
+.rules.show {
+  transform: translateX(0);
+}
+
+/* Footer Styles */
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .rules {
+    width: 100%;
+    transform: translateX(-100%);
+  }
+
+  canvas {
+    width: 100%;
+    height: auto;
+  }
+
+  .rules-btn {
+    top: 20px;
+    left: 20px;
+  }
+}
